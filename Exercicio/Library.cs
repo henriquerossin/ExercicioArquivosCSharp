@@ -61,7 +61,7 @@ namespace Exercicio
             using (StreamReader reader = new StreamReader(fullPath))
             {
                 string content = reader.ReadToEnd();
-                Console.WriteLine(content);
+                //Console.WriteLine(content);
                 reader.Close();
             }
 
