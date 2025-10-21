@@ -58,7 +58,7 @@ namespace Exercicio
 
         public void SaveFile()
         {
-            StreamWriter writer = new StreamWriter(fullPath/*, append: true*/);
+            StreamWriter writer = new StreamWriter(fullPath);
             foreach (var livro in livros)
             {
                 writer.WriteLine(livro);
