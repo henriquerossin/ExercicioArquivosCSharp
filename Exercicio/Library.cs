@@ -93,11 +93,7 @@ namespace Exercicio
             Console.Write("Informe o novo Gênero do livro: ");
             livroASerAtualizado.Genero = Console.ReadLine()!;
 
-
-
             return livroASerAtualizado;
-
-
         }
 
         public List<Livro> DeleteBook()
