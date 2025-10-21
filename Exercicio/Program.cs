@@ -7,6 +7,7 @@
             Library biblioteca = new Library();
             int opcao;
 
+            biblioteca.Verificador();
             biblioteca.PopularLista();
 
             do

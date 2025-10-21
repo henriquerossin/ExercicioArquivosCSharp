@@ -14,6 +14,28 @@ namespace Exercicio
         static string directoryPath = "C:\\Biblioteca\\";
         static string fullPath = Path.Combine(directoryPath, filePath);
 
+        public void Verificador()
+        {
+            try
+            {
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                if (!File.Exists(fullPath))
+                {
+                    using (StreamWriter wr = new StreamWriter(fullPath)) { };
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.Message);
+            }
+        }
+
         public void PopularLista()
         {
             StreamReader sr = new StreamReader(fullPath);
@@ -22,15 +44,7 @@ namespace Exercicio
             while ((line = sr.ReadLine()!) != null)
             {
                 var dado = line.Split(',');
-
-                string Titulo = dado[0];
-                string Autor = dado[1];
-                string AnoLancamento = dado[2];
-                string Genero = dado[3];
-
-                Livro l = new Livro(Titulo, Autor, AnoLancamento, Genero);
-
-                livros.Add(l);
+                livros.Add(new Livro(dado[0], dado[1], dado[2], dado[3]));
             }
             sr.Close();
         }

@@ -8,12 +8,12 @@ namespace Exercicio
 {
     public class Livro
     {
-        public string Titulo { get; set; }
-        public string Autor { get; set; }
-        public string AnoLancamento { get; set; }
-        public string Genero { get; set; }
+        public string? Titulo { get; set; }
+        public string? Autor { get; set; }
+        public string? AnoLancamento { get; set; }
+        public string? Genero { get; set; }
 
-        public Livro() {}
+        public Livro() { }
 
         public Livro(string titulo, string autor, string anoLancamento, string genero)
         {
