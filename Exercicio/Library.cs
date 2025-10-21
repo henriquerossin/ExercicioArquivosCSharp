@@ -58,13 +58,6 @@ namespace Exercicio
 
         public void SaveFile()
         {
-            using (StreamReader reader = new StreamReader(fullPath))
-            {
-                string content = reader.ReadToEnd();
-                //Console.WriteLine(content);
-                reader.Close();
-            }
-
             StreamWriter writer = new StreamWriter(fullPath/*, append: true*/);
             foreach (var livro in livros)
             {
