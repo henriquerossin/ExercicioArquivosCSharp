@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             Library biblioteca = new Library();
             int opcao;
 
